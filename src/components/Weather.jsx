@@ -23,7 +23,7 @@ const Weather = () => {
         <p className='text-4xl text-center'>Weather Forecast</p>  
         <div>
           <form onSubmit={handleSubmit}>
-            <input type='text' id='address' name='address' value={address}  placeholder='Enter your location...' className='mx-4 px-2 my-8 rounded-2xl' onChange={(event)=>{
+            <input type='text' id='address' name='address' value={address}  placeholder='Enter your city...' className='mx-4 px-2 my-8 rounded-2xl' onChange={(event)=>{
               setAddress(event.target.value)
             }}></input>
             <button type='submit' className='border-[1px] border-[#435334] px-2 tracking-wider rounded-[10px] hover:bg-[#435334]'>Forecast</button>
