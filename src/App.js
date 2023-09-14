@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import Weather from './components/Weather'
+import NavBar from './components/NavBar'
+import About from './components/About'
+import {HashRouter as Router, Routes ,Route} from "react-router-dom"
+import References from './components/References'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='m-auto flex flex-col items-center'>
+      
+      <Router>
+        <NavBar />
+        
+        <Routes>
+            
+          <Route path='/' exact element={<Weather/>}>
+          </Route>
+          <Route path='/about' element={<About/>}>
+          </Route>
+          <Route path='/references' element={<References/>}>
+          </Route>
+        </Routes>
+         
+      </Router>
+      
+      
+      
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
