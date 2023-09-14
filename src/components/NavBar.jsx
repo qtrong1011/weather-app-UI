@@ -10,13 +10,16 @@ const NavBar = () => {
   return (
     <div className='w-[100%] flex justify-between items-center shadow-sm shadow-[#040c16] text-[#FAF1E4]'>
         <div>
-            <img src={WeatherLogo} alt='Logo' style={
-                {
-                    width: '50px',
-                    marginLeft: '10px',
-                    marginTop : '10px'
-                }
-            }></img>
+            <Link to='/'>
+                <img src={WeatherLogo} alt='Logo' style={
+                    {
+                        width: '50px',
+                        marginLeft: '10px',
+                        marginTop : '10px'
+                    }
+                }></img>
+            </Link>
+            
         </div>
         {/* Menu */}
         <ul className='md:flex hidden'>
